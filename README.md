@@ -21,6 +21,12 @@ system.
 No PeptiDream code, model weights, confidential data or automated website
 scraping is included.
 
+The implementation now also contains a **research-level functional analogue**
+of iterative RaPID selection: target pull-down scoring, counter-selection,
+round-wise enrichment, PCR/NGS-like sampling and sequence ranking. It does not
+claim access to PDPS automation parameters, PeptiDream's private monomer set,
+private experimental results or physical vendor libraries.
+
 ## Quick start
 
 Use Python 3.10 or newer. From this directory:
@@ -32,11 +38,24 @@ python -m dreampep.cli train-student work/dataset.jsonl work/student.json
 python -m dreampep.cli design work/dataset.jsonl work/student.json --target DEMO_TARGET --n 10 --output work/candidates.jsonl
 python -m dreampep.cli build-library --target DEMO_TARGET --size 384 --ring-length 10 --output work/cyclic_library_384.csv
 python -m dreampep.cli build-thioether-library --manifest work/thioether_manifest.json --chunk-output work/thioether_first_1000.csv --start 0 --stop 1000
+python -m dreampep.cli normalize-public-catalog examples/public_source_manifest.csv work/public_sources_normalized.csv
+python -m dreampep.cli simulate-selection work/dataset.jsonl work/student.json --rounds 6 --reads 20000 --output work/selection.csv
 python -m unittest discover -s tests -v
 ```
 
 The bundled CSV is synthetic and exists only to test the workflow. It must not
 be presented as PeptiDream experimental data.
+
+## Public and commercial library sources
+
+`examples/public_source_manifest.csv` distinguishes sequence-bearing public
+records from service descriptions. GenScript catalog entries may be imported
+only when a sequence is actually displayed. WuXi TIDES, JPT PepTrack and
+Biosynth/Pepscan pages describe synthesis/library capabilities but do not, by
+themselves, provide a redistributable full sequence-and-activity dataset.
+Customer-exported or licensed files can use the same schema. Patent examples
+and paper supplementary data require exact example/table identifiers, URLs,
+evidence classes and family-grouped train/test splits.
 
 ## Billion-member thioether macrocycle library
 
