@@ -1,0 +1,6 @@
+record_id,sequence,target_id,topology,assay_name,assay_value,assay_unit,assay_relation,evidence,source_type,source_identifier,source_url,location,patent_family,license_or_terms,helm,smiles
+demo-001,ACFWYKLC,DEMO_TARGET,cyclic,binding_proxy,12,nM,=,reported,synthetic-demo,DEMO-001,https://example.invalid/demo,Example 1,DEMO-FAMILY,CC0,,
+demo-002,AVWNYIIC,DEMO_TARGET,cyclic,binding_proxy,80,nM,=,reported,synthetic-demo,DEMO-001,https://example.invalid/demo,Example 2,DEMO-FAMILY,CC0,,
+demo-003,GFWRYHVC,DEMO_TARGET,cyclic,binding_proxy,25,nM,=,reported,synthetic-demo,DEMO-002,https://example.invalid/demo,Example 3,DEMO-FAMILY-2,CC0,,
+demo-004,ADDEKQSC,DEMO_TARGET,cyclic,binding_proxy,200,nM,=,reported,synthetic-demo,DEMO-002,https://example.invalid/demo,Example 4,DEMO-FAMILY-2,CC0,,
+
