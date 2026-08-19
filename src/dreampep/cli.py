@@ -15,7 +15,9 @@ from .library import (
     write_vendor_csv,
 )
 from .pipeline import DesignPipeline
+from .public_sources import normalize_public_catalog
 from .scoring import DevelopabilityScorer, LinearStudent
+from .selection import simulate_rapid_selection, write_selection_csv
 
 
 def main() -> None:
@@ -47,6 +49,15 @@ def main() -> None:
     thioether.add_argument("--start", type=int, default=0)
     thioether.add_argument("--stop", type=int, default=0)
     thioether.add_argument("--seed", type=int, default=17)
+    public_catalog = commands.add_parser("normalize-public-catalog")
+    public_catalog.add_argument("input_csv")
+    public_catalog.add_argument("output_csv")
+    selection = commands.add_parser("simulate-selection")
+    selection.add_argument("dataset")
+    selection.add_argument("model")
+    selection.add_argument("--rounds", type=int, default=6)
+    selection.add_argument("--reads", type=int, default=20000)
+    selection.add_argument("--output", required=True)
     args = parser.parse_args()
 
     if args.command == "ingest":
@@ -95,6 +106,21 @@ def main() -> None:
             "exported_rows": exported,
             "chunk_output": args.chunk_output,
         }))
+    elif args.command == "normalize-public-catalog":
+        count = normalize_public_catalog(args.input_csv, args.output_csv)
+        print(json.dumps({"records": count, "output": args.output_csv}))
+    elif args.command == "simulate-selection":
+        records = read_jsonl(args.dataset)
+        model = LinearStudent.load(args.model)
+        sequences = [record.sequence for record in records]
+        rows = simulate_rapid_selection(
+            sequences,
+            lambda sequence: model.score("TARGET", [sequence])[0],
+            rounds=args.rounds,
+            reads_per_round=args.reads,
+        )
+        write_selection_csv(args.output, rows)
+        print(json.dumps({"observations": len(rows), "output": args.output}))
 
 
 if __name__ == "__main__":
