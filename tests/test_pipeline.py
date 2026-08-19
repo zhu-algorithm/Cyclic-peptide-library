@@ -9,12 +9,22 @@ from dreampep.io import read_jsonl, write_jsonl
 from dreampep.library import build_disulfide_library
 from dreampep.pipeline import DesignPipeline
 from dreampep.scoring import DevelopabilityScorer, LinearStudent
+from dreampep.selection import simulate_rapid_selection
 
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class PipelineTest(unittest.TestCase):
+    def test_rapid_like_selection(self):
+        sequences = ["ACDEFGHC", "CAAAAAAC", "CWYWYWYC", "CGGGGGGC"]
+        rows = simulate_rapid_selection(
+            sequences, lambda sequence: sequence.count("W"), rounds=2, reads_per_round=1000, seed=2
+        )
+        self.assertTrue(rows)
+        self.assertEqual(max(row.round_index for row in rows), 2)
+        self.assertTrue(all(row.target_count >= 0 and row.counter_count >= 0 for row in rows))
+
     def test_library_design(self):
         rows = build_disulfide_library(24, 10, seed=3)
         self.assertEqual(len(rows), 24)
