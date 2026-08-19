@@ -1,0 +1,358 @@
+{
+  "library_type": "virtual thioether macrocycle",
+  "size": 1000000000,
+  "combinatorial_capacity": 178250668358866380,
+  "lengths": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "variable_positions": "positions 1..N-1",
+  "fixed_residue": "C-terminal L-Cys",
+  "n_terminal": "N-chloroacetyl",
+  "c_terminal": "carboxamide",
+  "cyclization": "intramolecular thioether",
+  "building_blocks": [
+    {
+      "code": "A",
+      "name": "alanine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "D",
+      "name": "aspartic acid",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "E",
+      "name": "glutamic acid",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "F",
+      "name": "phenylalanine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "G",
+      "name": "glycine",
+      "residue_class": "natural",
+      "stereo": "achiral"
+    },
+    {
+      "code": "H",
+      "name": "histidine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "I",
+      "name": "isoleucine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "K",
+      "name": "lysine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "L",
+      "name": "leucine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "M",
+      "name": "methionine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "N",
+      "name": "asparagine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "P",
+      "name": "proline",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Q",
+      "name": "glutamine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "R",
+      "name": "arginine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "S",
+      "name": "serine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "T",
+      "name": "threonine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "V",
+      "name": "valine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "W",
+      "name": "tryptophan",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Y",
+      "name": "tyrosine",
+      "residue_class": "natural",
+      "stereo": "L"
+    },
+    {
+      "code": "dA",
+      "name": "D-alanine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dD",
+      "name": "D-aspartic acid",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dE",
+      "name": "D-glutamic acid",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dF",
+      "name": "D-phenylalanine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dH",
+      "name": "D-histidine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dI",
+      "name": "D-isoleucine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dK",
+      "name": "D-lysine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dL",
+      "name": "D-leucine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dM",
+      "name": "D-methionine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dN",
+      "name": "D-asparagine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dP",
+      "name": "D-proline",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dQ",
+      "name": "D-glutamine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dR",
+      "name": "D-arginine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dS",
+      "name": "D-serine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dT",
+      "name": "D-threonine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dV",
+      "name": "D-valine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dW",
+      "name": "D-tryptophan",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "dY",
+      "name": "D-tyrosine",
+      "residue_class": "non-natural",
+      "stereo": "D"
+    },
+    {
+      "code": "NMeA",
+      "name": "N-methyl-L-alanine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "NMeF",
+      "name": "N-methyl-L-phenylalanine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "NMeG",
+      "name": "sarcosine",
+      "residue_class": "non-natural",
+      "stereo": "achiral"
+    },
+    {
+      "code": "Aib",
+      "name": "2-aminoisobutyric acid",
+      "residue_class": "non-natural",
+      "stereo": "achiral"
+    },
+    {
+      "code": "BAl",
+      "name": "beta-alanine",
+      "residue_class": "non-natural",
+      "stereo": "achiral"
+    },
+    {
+      "code": "Orn",
+      "name": "L-ornithine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Dab",
+      "name": "L-2,4-diaminobutyric acid",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Nle",
+      "name": "L-norleucine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Cha",
+      "name": "L-cyclohexylalanine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Nal1",
+      "name": "L-1-naphthylalanine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Nal2",
+      "name": "L-2-naphthylalanine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Fpa",
+      "name": "4-fluoro-L-phenylalanine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "ClF",
+      "name": "4-chloro-L-phenylalanine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Bpa",
+      "name": "4-benzoyl-L-phenylalanine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Hph",
+      "name": "L-homophenylalanine",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    },
+    {
+      "code": "Cit",
+      "name": "L-citrulline",
+      "residue_class": "non-natural",
+      "stereo": "L"
+    }
+  ],
+  "index_mapping": {
+    "type": "length-stratified affine permutations",
+    "length_assignment": "index modulo 4",
+    "multipliers": [
+      912774970563,
+      25730979396697,
+      3175680634232319,
+      80207743999305327
+    ],
+    "offsets": [
+      669184641376,
+      12293440332698,
+      2432779875238094,
+      71741433021027366
+    ],
+    "moduli": [
+      1174711139837,
+      62259690411361,
+      3299763591802133,
+      174887470365513049
+    ]
+  }
+}
